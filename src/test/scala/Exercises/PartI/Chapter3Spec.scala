@@ -1,8 +1,6 @@
-package Exercises.PartI
-
 import org.scalatest._
 import Book.List
-import Exercises.PartI.Chapter3._
+import Exercises.PartI.Chapter3.{length => listLength, _}
 
 class Chapter3Spec extends FlatSpec with Matchers {
   "tail" should "return the tail of a Book.List" in {
@@ -77,10 +75,10 @@ class Chapter3Spec extends FlatSpec with Matchers {
   }
 
   "length" should "return the length of a Book.List" in {
-    Chapter3.length(List()) should be (0)
-    Chapter3.length(List(1)) should be (1)
-    Chapter3.length(List(1, 2, 3)) should be (3)
-    Chapter3.length(List("cat", "dog", "fish")) should be (3)
+    listLength(List()) should be (0)
+    listLength(List(1)) should be (1)
+    listLength(List(1, 2, 3)) should be (3)
+    listLength(List("cat", "dog", "fish")) should be (3)
   }
 
   "foldLeft" should "fold a function across Book.List elements from last to head" in {

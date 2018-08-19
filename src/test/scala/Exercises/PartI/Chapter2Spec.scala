@@ -1,5 +1,3 @@
-package Exercises.PartI
-
 import org.scalatest._
 import Exercises.PartI.Chapter2._
 
