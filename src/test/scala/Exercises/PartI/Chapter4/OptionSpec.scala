@@ -63,4 +63,8 @@ class OptionSpec extends FlatSpec with Matchers {
     Some(-1).filter(_ > 0) should be (None)
     (None: Option[Int]).filter(_ > 0) should be (None)
   }
+
+  "map2" should "" in {
+    // todo
+  }
 }

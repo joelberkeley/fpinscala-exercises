@@ -3,9 +3,8 @@ package Exercises.PartI
 import scala.annotation.tailrec
 
 object Chapter2 {
+  // Exercise 2.1
   /** Return the nth number in the Fibonacci sequence. Indices start at 1
-    *
-    * Exercise 2.1
     *
     * @param n Index of number in sequence (starting at 1)
     * @throws IllegalArgumentException if index provided is not positive
@@ -24,9 +23,8 @@ object Chapter2 {
     if (n == 1) 0 else go(0, 1, 2)
   }
 
+  // Exercise 2.2
   /** Return whether array is sorted according to given comparison function
-    *
-    * Exercise 2.2
     *
     * @param as Array to check
     * @param ordered comparison function for pairs of array elements
@@ -47,10 +45,9 @@ object Chapter2 {
     as.length < 2 || go(0)
   }
 
+  // Exercise 2.3
   /** Takes a function with a single list of two arguments and returns an equivalent function with the arguments now
     * accepted as two lists of single arguments (i.e. curried).
-    *
-    * Exercise 2.3
     *
     * @param f function to curry
     * @tparam A type of first argument to passed function
@@ -60,9 +57,8 @@ object Chapter2 {
     */
   def curry[A,B,C](f: (A, B) => C): A => (B => C) = a => f(a, _)
 
+  // Exercise 2.4
   /** The opposite of `curry`
-    *
-    * Exercise 2.4
     *
     * @param f function to uncurry
     * @tparam A type of first argument to passed function
@@ -72,10 +68,9 @@ object Chapter2 {
     */
   def uncurry[A,B,C](f: A => B => C): (A, B) => C = f(_)(_)
 
+  // Exercise 2.5
+  // For this exercise we are not allowed to use the library `compose` function
   /** Returns a function s.t. compose(f,g)(x) == f(g(x))
-    *
-    * Exercise 2.5
-    * For this exercise we are not allowed to use the library `compose` function
     *
     * @param f second function to apply
     * @param g first function to apply
